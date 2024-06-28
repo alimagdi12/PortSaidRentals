@@ -1,18 +1,18 @@
-const Conversation = require('../../models/Conversation/conversation.model');
+const Conversation = require("../../models/conversation/conversation.model");
 
 class ConversationRepository {
-    constructor() { }
+  constructor() {}
 
-    async getConversationByParticipants(participantId) {
-        return await Conversation.find({ participants: { $in: [participantId] } })
-          .populate('participants')
-          .populate('messages')
-          .exec();
-      }
+  async getConversationByParticipants(participantId) {
+    return await Conversation.find({ participants: { $in: [participantId] } })
+      .populate("participants")
+      .populate("messages")
+      .exec();
+  }
 
-    async getAllConversations() {
-        return Conversation.find();
-    }
+  async getAllConversations() {
+    return Conversation.find();
+  }
 }
 
 module.exports = ConversationRepository;
