@@ -1,4 +1,4 @@
-const Message = require('../../models/Messages/Messages.model');
+const Message = require('../../models/messages/messages.model');
 const Conversation = require('../../models/Conversation/conversation.model');
 
 class MessageRepository{
