@@ -87,7 +87,9 @@ app.get("/checkout-success", async (req, res) => {
   console.log(token);
   const x = await orderRepository.createOrder(token);
   // console.log(x);
-  res.redirect("https://front-end-react-six.vercel.app/profile/orders");
+  res.redirect(
+    "hhttps://front-end-react-hkp4iciy1-alimagdi12s-projects.vercel.app/profile/orders"
+  );
   //  res.send('Checkout success!');
 });
 
