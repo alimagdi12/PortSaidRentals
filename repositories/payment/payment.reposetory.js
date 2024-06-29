@@ -1,4 +1,4 @@
-const orderModel = require('../../models/order/order.model');
+const orderModel = require('../../models/order/Order.model');
 const Product = require('../../models/products/product.model');
 const User = require('../../models/user/user.model');
 const jwt = require("jsonwebtoken");
