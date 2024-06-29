@@ -66,9 +66,6 @@ io.on("connection", async (socket) => {
   });
 
   socket.on("newBid", async (bidData) => {
-    // Store the new bid in the database (you may already have this functionality)
-    // await bidRepository.createBid(bidData.bidder, bidData.amount, bidData.auctionId);
-
     // Emit the new bid to all clients
     io.emit("newBid", bidData);
   });
@@ -90,7 +87,7 @@ app.get("/checkout-success", async (req, res) => {
   console.log(token);
   const x = await orderRepository.createOrder(token);
   // console.log(x);
-  res.redirect("http://localhost:5173/profile/orders");
+  res.redirect("https://front-end-react-six.vercel.app/profile/orders");
   //  res.send('Checkout success!');
 });
 
